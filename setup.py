@@ -26,15 +26,17 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-import os
-from setuptools import setup
 from codecs import open
 from os import path
 
-from piplicenses import (__pkgname__ as PKG_NAME, __version__ as VERSION,
-                         __author__ as AUTHOR, __license__ as LICENSE,
-                         __summary__ as SUMMARY, __url__ as URL)
+from setuptools import setup
 
+PKG_NAME = 'pip-licenses'
+VERSION = '3.5.3'
+AUTHOR = 'raimon'
+LICENSE = 'MIT'
+SUMMARY = 'Dump the software license list of Python packages installed with pip.'
+URL = 'https://github.com/raimon49/pip-licenses'
 
 here = path.abspath(path.dirname(__file__))
 
@@ -58,7 +60,6 @@ try:
     LONG_DESC = about_this + separate + change_log
 except (IOError, ImportError):
     LONG_DESC = read_file('README.md')
-
 
 setup(
     name=PKG_NAME,
